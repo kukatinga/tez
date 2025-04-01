@@ -288,14 +288,20 @@
             }
         }
         
-        // Exit-intent popup
-        document.addEventListener('mouseout', (e) => {
-            if (e.clientY < 50) {
-                if (confirm("Wait! Get your FREE lease report before leaving?")) {
-                    document.getElementById("leadForm").scrollIntoView();
-                }
-            }
-        });
+     // Less aggressive exit-intent (triggers after 60 seconds + requires mouse to top edge)
+let hasInteracted = false;
+setTimeout(() => {
+    hasInteracted = true;
+}, 60000); // 60-second delay
+
+document.addEventListener('mouseout', (e) => {
+    if (hasInteracted && e.clientY < 5) { // Only triggers when mouse hits very top
+        const showForm = confirm("Want a personalized Tesla lease report?");
+        if (showForm) {
+            document.getElementById("leadForm").scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+});
         
         // Initialize with default calculation
         window.onload = calculateLease;
