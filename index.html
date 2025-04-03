@@ -37,7 +37,6 @@
       gtag('config', 'G-S4EFKWFQBV');
     </script>
 
-    <!-- Styles -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -48,7 +47,114 @@
             color: #333;
             line-height: 1.6;
         }
-        /* Rest of your CSS styles remain unchanged */
+        h2 {
+            color: #cc0000;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+        .calculator-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        select, input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #b30000;
+        }
+        .result-box {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            border-left: 4px solid #cc0000;
+        }
+        .result-value {
+            font-size: 22px;
+            font-weight: bold;
+            color: #cc0000;
+            margin: 10px 0;
+        }
+        .cta-box {
+            background: #e6f7e6;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 25px 0;
+            border: 1px dashed #00cc00;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #00cc00;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .testimonial {
+            font-style: italic;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            position: relative;
+            margin: 20px 0;
+        }
+        .testimonial:before {
+            content: '"';
+            font-size: 40px;
+            color: #cc0000;
+            position: absolute;
+            left: 10px;
+            top: -15px;
+        }
+        .offer-counter {
+            font-size: 14px;
+            color: #cc0000;
+            text-align: center;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .calculator-box {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
